@@ -5,8 +5,6 @@
 #define PLAYERCASE 'O'
 #define IACASE 'X'
 
-#define INT_MIN 10
-
 class Morpion
 {
 private:
@@ -15,17 +13,22 @@ private:
 public:
 	Morpion();
 
+	void initGrid();
+
 	void displayMorpion();
 	void displayRules();
 	void askChoice();
 
 	void placeBlock(int row, int col, char value);
 	bool isGridFull();
-	int minimax(char currentPlayer, char board[3][3], int depth);
 	bool canWinIAPlay(char player);
 	bool canPlaceBlock(int row, int col);
 
 	void iaPlay();
+
+	int minimax(int depth, bool isMaximizing);
+
+	std::vector<std::pair<int, int>> getAvailableMoves();
 
 	bool isWinPlayer(char player);
 
@@ -34,4 +37,6 @@ public:
 	void Game();
 
 };
+
+bool isPlayAgain();
 
