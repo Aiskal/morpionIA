@@ -29,7 +29,7 @@ void Morpion::displayMorpion() {
 
 void Morpion::displayRules()
 {
-    std::cout << "Yo play as " << PLAYERCASE << ".IA plays as " << IACASE << ".\n"
+    std::cout << "You play as " << PLAYERCASE << ". And the IA plays as " << IACASE << ".\n"
         "Answer between 1 and 9. Like your keyboard pad.\nEx : Top - left is 7. Bottom - Left is line 1.\n";
 }
 
